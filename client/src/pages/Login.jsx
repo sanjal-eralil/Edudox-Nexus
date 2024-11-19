@@ -4,6 +4,7 @@ import { post } from '../services/ApiEndpoint'
 import  { toast } from 'react-hot-toast';
 import {useDispatch,useSelector } from 'react-redux'
 import { SetUser } from '../redux/AuthSlice';
+import Navbar from '../Components/Navbar/Navbar';
 export default function Login() {
  const user=useSelector((state)=>state.Auth)
  console.log(user)
@@ -23,7 +24,7 @@ export default function Login() {
                 if (reponse.user.role =='admin') {
                   navigate('/admin')
                 }else if (reponse.user.role =='user') {
-                   navigate('/')
+                   navigate('/upload')
                 }
                 toast.success(reponse.message)
                 dispatch(SetUser(reponse.user))
@@ -35,7 +36,7 @@ export default function Login() {
        }
   return (
     <>
-
+      <Navbar/>
         <div className='login-container'>
             <h2>Login</h2>
             <form onSubmit={handleSubmit}>

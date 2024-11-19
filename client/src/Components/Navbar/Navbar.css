@@ -1,0 +1,66 @@
+/* Navbar CSS */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #ff4d4d, #1e90ff); /* Smooth gradient transition */
+    padding: 20px 40px;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background 0.5s ease; /* Smooth transition effect */
+    border: none; /* Ensure no borders are applied */
+}
+
+
+/* Navbar Links Right */
+.navbar-links-right {
+    display: flex;
+    align-items: center;
+}
+
+/* Always display links */
+.navbar-links-right ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style for each link */
+.navbar-links-right ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+}
+
+/* Logout button styling */
+.logout-btn {
+    padding: 8px 16px;
+    background-color: #ff4d4d;
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar-links-right ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Navbar User Left */
+.navbar-user-left {
+    flex-grow: 1;
+    color: white;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+}

@@ -12,6 +12,14 @@ import PbulicLayout from './Layouts/PublicLayouts'
 import PublicLayouts from './Layouts/PublicLayouts'
 import { useDispatch,useSelector } from 'react-redux'
 import { updateUser } from './redux/AuthSlice'
+import UserFiles from './pages/Files'
+import FileByDate from './pages/FileByDate'
+import EmailandDate from './pages/EmailandDate'
+import User from './pages/User'
+import FileByPublishedDate from './pages/FileByPublishedDate'
+import AllFilter from './pages/AllFilter'
+import Category from './pages/Category'
+
 
 
 export default function App() {
@@ -33,10 +41,21 @@ const disptch=useDispatch()
 
               </Route>
               <Route path='/admin' element={<AdminLaouts/>}>
+              <Route path='/admin/getfiles' element={<UserFiles/>}/>
+              <Route path='/admin/getfilesbydate' element={<FileByDate/>}/>
+              <Route path='/admin/getemailanddate' element={<EmailandDate/>}/>
+              <Route path='/admin/getpublisheddate' element={<FileByPublishedDate/>}/>
+              <Route path='/admin/AllFilter' element={<AllFilter/>}/>
+              <Route path='/admin/category' element={<Category/>}/>
+              <Route path='/admin/allfilter' element={<AllFilter/>}/>
+
+              <Route path='/admin/user' element={<User/>}/>
+
               <Route index element={<Admin/>}/>
 
               </Route>
               <Route path='/' element={<PublicLayouts/>}>
+             
               <Route path='login' element={<Login/>}/>
               <Route path='register' element={<Register/>}/>
                    

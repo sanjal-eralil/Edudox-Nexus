@@ -169,7 +169,12 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
-  
+  .my-button{
+    background-color: #007bff;
+  }
+  .my-button:hover{
+    background-color:blue;
+  }
   button:hover {
     background-color: #c82333;
   }
@@ -226,3 +231,8 @@
     background-color: #c82333;
   }
         
+  .row{
+    display: 'flex',
+    
+
+  }

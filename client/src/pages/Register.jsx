@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { post } from '../services/ApiEndpoint'
 import { toast } from 'react-hot-toast';
+import Navbar from '../Components/Navbar/Navbar';
 export default function Register() {
   const [name,setName]=useState('')
   const [email,setEmail]=useState('')
@@ -23,6 +24,7 @@ export default function Register() {
   }
   return (
     <>
+    <Navbar/>
           <div className='register-container'>
             <h2>Register</h2>
                <form action="" onSubmit={handleSubmit}>
